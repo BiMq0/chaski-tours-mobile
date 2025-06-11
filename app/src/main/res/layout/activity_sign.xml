@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignActivity">
+
+    <TextView
+        android:id="@+id/tvTituloSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="INGRESA TUS DATOS PARA REGISTRARTE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_contrasenia_sign"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ingresa tu contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/et_correo_sign"
+        app:layout_constraintStart_toStartOf="@+id/et_correo_sign"
+        app:layout_constraintTop_toBottomOf="@+id/et_correo_sign" />
+
+    <EditText
+        android:id="@+id/et_documento_sign"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ingresa tu documento"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/et_contrasenia_sign"
+        app:layout_constraintStart_toStartOf="@+id/et_contrasenia_sign"
+        app:layout_constraintTop_toBottomOf="@+id/et_contrasenia_sign" />
+
+    <EditText
+        android:id="@+id/et_nombre_sign"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ingresa tu nombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/et_documento_sign"
+        app:layout_constraintStart_toStartOf="@+id/et_documento_sign"
+        app:layout_constraintTop_toBottomOf="@+id/et_documento_sign" />
+
+
+
+    <EditText
+        android:id="@+id/et_appat_sign"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ingresa tu apellido paterno"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/et_nombre_sign"
+        app:layout_constraintStart_toStartOf="@+id/et_nombre_sign"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombre_sign" />
+
+    <EditText
+        android:id="@+id/et_apmat_sign"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ingresa tu apellido materno"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/et_appat_sign"
+        app:layout_constraintStart_toStartOf="@+id/et_appat_sign"
+        app:layout_constraintTop_toBottomOf="@+id/et_appat_sign" />
+
+    <EditText
+        android:id="@+id/et_fechanac_sign"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ingresa tu fecha de nacimiento"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/et_apmat_sign"
+        app:layout_constraintStart_toStartOf="@+id/et_apmat_sign"
+        app:layout_constraintTop_toBottomOf="@+id/et_apmat_sign" />
+
+    <EditText
+        android:id="@+id/et_telefono_sign"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Ingresa tu numero de telefono"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/et_fechanac_sign"
+        app:layout_constraintStart_toStartOf="@+id/et_fechanac_sign"
+        app:layout_constraintTop_toBottomOf="@+id/et_fechanac_sign" />
+
+    <EditText
+        android:id="@+id/et_correo_sign"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="Ingresa tu documento"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/tvTituloSign"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/tvTituloSign"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloSign" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="@+id/et_telefono_sign"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_telefono_sign" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Enviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintStart_toStartOf="@+id/et_telefono_sign"
+        app:layout_constraintTop_toBottomOf="@+id/et_telefono_sign" />
+</androidx.constraintlayout.widget.ConstraintLayout>

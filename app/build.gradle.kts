@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.chaski_tours_mobile"
+    namespace = "com.example.proyecto"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.chaski_tours_mobile"
+        applicationId = "com.example.proyecto"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,10 +33,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding=true
+    }
 }
 
 dependencies {
-
+    implementation("com.mapbox.maps:android:11.12.3")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -45,4 +50,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }
