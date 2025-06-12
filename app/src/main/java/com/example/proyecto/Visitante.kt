@@ -1,15 +1,11 @@
 package com.example.proyecto
 
+import android.support.v4.app.INotificationSideChannel.Default
 import java.util.Date
 
-class Visitante (val correo_electronico : String,
-                 val contrasenia : String,
-                 val documento : String,
-                 val nombre : String,
-                 val ap_pat : String,
-                 val ap_mat : String,
-                 val fecha_nac : String,
-                 val nacionalidad : String,
-                 val telefono : String) {
+class Visitante (
+                 var cod_visitante:String,
+                 var tipo_visitante:String,
+                 var Activo:Int) {
 
 }

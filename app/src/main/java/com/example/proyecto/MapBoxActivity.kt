@@ -13,10 +13,16 @@ import com.example.proyecto.databinding.ActivityMapBoxBinding
 import com.mapbox.geojson.Point
 import com.mapbox.maps.CameraOptions
 import com.mapbox.maps.MapView
+import com.mapbox.maps.plugin.annotation.annotations
+import com.mapbox.maps.plugin.annotation.generated.PointAnnotationOptions
+import com.mapbox.maps.plugin.annotation.generated.createPointAnnotationManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.mapbox.maps.Style
+import android.graphics.BitmapFactory
+
 
 class MapBoxActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMapBoxBinding
@@ -24,6 +30,7 @@ class MapBoxActivity : AppCompatActivity() {
     private lateinit var service: RetrofitService
     private lateinit var lst_Ubicaciones:List<Ubicaciones>
     var id_ubi = 0
+
 
 
 
@@ -38,32 +45,45 @@ class MapBoxActivity : AppCompatActivity() {
 
 
     }
-
     private fun configurarUbicacion() {
-        val ubicacion = lst_Ubicaciones.find {
-            it.id_ubicacion == id_ubi
-        }
+        val ubicacion = lst_Ubicaciones.find { it.id_ubicacion == id_ubi }
 
         if (ubicacion != null) {
-            Toast.makeText(this, "Ubicacion Encontrada", Toast.LENGTH_SHORT).show()
+            val point = Point.fromLngLat(lst_Ubicaciones[id_ubi-1].longitud, lst_Ubicaciones[id_ubi-1].latitud)
 
-
-            val mapView: MapView = binding.mapView
-            mapView.getMapboxMap().setCamera(
-                CameraOptions.Builder()
-                    .center(Point.fromLngLat(lst_Ubicaciones[id_ubi-1].longitud, lst_Ubicaciones[id_ubi-1].latitud))
-                    .zoom(14.0)
-                    .build()
-            )
-
+            binding.mapView.mapboxMap.loadStyle(Style.STANDARD) { style ->
+                setCameraPosition(point)
+                addMarker(point)
+            }
+        } else {
+            Toast.makeText(this, "Ubicación no encontrada", Toast.LENGTH_SHORT).show()
         }
-        else {
-            Toast.makeText(this, "Ubicacion No Encontrada", Toast.LENGTH_SHORT).show()
-        }
-
-
-
     }
+
+    private fun setCameraPosition(point: Point) {
+        binding.mapView.mapboxMap.setCamera(
+            CameraOptions.Builder()
+                .center(point)
+                .zoom(14.0)
+                .build()
+        )
+    }
+
+    private fun addMarker(point: Point) {
+        val annotationApi = binding.mapView.annotations
+        val pointAnnotationManager = annotationApi.createPointAnnotationManager()
+        val markerBitmap = BitmapFactory.decodeResource(
+            resources,
+            R.drawable.red_marker
+        )
+        val pointAnnotationOptions = PointAnnotationOptions()
+            .withPoint(point)
+            .withIconImage(markerBitmap)
+            .withIconSize(0.5)
+
+        pointAnnotationManager.create(pointAnnotationOptions)
+    }
+
 
 
     private fun getUbicaciones(){

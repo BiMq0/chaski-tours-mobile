@@ -21,7 +21,7 @@
     <EditText
         android:id="@+id/et_contrasenia_sign"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Ingresa tu contraseña"
         android:inputType="textPassword"
@@ -32,7 +32,7 @@
     <EditText
         android:id="@+id/et_documento_sign"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Ingresa tu documento"
         android:inputType="text"
@@ -43,7 +43,7 @@
     <EditText
         android:id="@+id/et_nombre_sign"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Ingresa tu nombre"
         android:inputType="text"
@@ -52,11 +52,10 @@
         app:layout_constraintTop_toBottomOf="@+id/et_documento_sign" />
 
 
-
     <EditText
         android:id="@+id/et_appat_sign"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Ingresa tu apellido paterno"
         android:inputType="text"
@@ -67,7 +66,7 @@
     <EditText
         android:id="@+id/et_apmat_sign"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Ingresa tu apellido materno"
         android:inputType="text"
@@ -78,9 +77,9 @@
     <EditText
         android:id="@+id/et_fechanac_sign"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:hint="Ingresa tu fecha de nacimiento"
+        android:hint="AAAA/MM/DD"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/et_apmat_sign"
         app:layout_constraintStart_toStartOf="@+id/et_apmat_sign"
@@ -89,7 +88,7 @@
     <EditText
         android:id="@+id/et_telefono_sign"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Ingresa tu numero de telefono"
         android:inputType="phone"
@@ -100,10 +99,10 @@
     <EditText
         android:id="@+id/et_correo_sign"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="80dp"
         android:ems="10"
-        android:hint="Ingresa tu documento"
+        android:hint="Ingresa tu correo"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/tvTituloSign"
         app:layout_constraintHorizontal_bias="0.497"
@@ -111,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTituloSign" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_cancelar_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
@@ -122,7 +121,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_telefono_sign" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_enviar_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"

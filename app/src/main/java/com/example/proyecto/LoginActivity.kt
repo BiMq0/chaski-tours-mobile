@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var service: RetrofitService
-    private lateinit var list_turistas:List<Visitante>
+    private lateinit var list_turistas:List<Turista>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding= ActivityLoginBinding.inflate(layoutInflater)
@@ -48,12 +48,12 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Cargando datos, intenta de nuevo...", Toast.LENGTH_SHORT).show()
             return
         }
-        val visitante = list_turistas.find {
+        val turista = list_turistas.find {
             it.correo_electronico == emailingresado && it.contrasenia == contraseniaingresada
         }
 
-        if (visitante != null) {
-            Toast.makeText(this, "Bienvenido ${visitante.nombre}", Toast.LENGTH_SHORT).show()
+        if (turista != null) {
+            Toast.makeText(this, "Bienvenido ${turista.nombre}", Toast.LENGTH_SHORT).show()
             configentrar()
 
         }

@@ -9,23 +9,50 @@
 
     <Button
         android:id="@+id/btn_registrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:text="Registrate"
+        android:backgroundTint="@color/principal"
         app:layout_constraintEnd_toEndOf="@+id/btn_logear"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btn_logear"
         app:layout_constraintTop_toBottomOf="@+id/btn_logear" />
 
     <Button
         android:id="@+id/btn_logear"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:text="Iniciar Sesion"
+        android:backgroundTint="@color/principal"
+        app:layout_constraintEnd_toEndOf="@+id/tv_titulo_main"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/tv_titulo_main"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo_main" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="192dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_sl" />
+
+    <TextView
+        android:id="@+id/tv_titulo_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="468dp"
-        android:text="Iniciar Sesion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="140dp"
+        android:text="CHASKI-TOURS-API"
+        android:textColor="@color/secundario"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_logo"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/img_logo"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
