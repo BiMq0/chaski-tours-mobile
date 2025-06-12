@@ -29,6 +29,7 @@ class MapBoxActivity : AppCompatActivity() {
     private lateinit var mapView: MapView
     private lateinit var service: RetrofitService
     private lateinit var lst_Ubicaciones:List<Ubicaciones>
+    private lateinit var lst_Sitios:List<ItemSitio>
     var id_ubi = 0
 
 
@@ -40,11 +41,48 @@ class MapBoxActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
         id_ubi = intent.getIntExtra("id_ubicacion", 0)
+
         setupRetrofit()
         getUbicaciones()
 
 
     }
+    private fun setupRetrofit(){
+        val retrofit= Retrofit.Builder()
+            .baseUrl(Constants.Base_url)
+            .addConverterFactory( GsonConverterFactory.create())
+            .build()
+        service=retrofit.create(RetrofitService::class.java)
+    }
+    private fun getUbicaciones(){
+        lifecycleScope.launch(Dispatchers.IO) {
+            lst_Ubicaciones = service.getUbicaciones()
+            launch(Dispatchers.Main) {
+                getSitios()
+                configurarUbicacion()
+            }
+        }
+    }
+    private fun getSitios(){
+        lifecycleScope.launch(Dispatchers.IO) {
+            lst_Sitios =service.getSitios()
+            launch(Dispatchers.Main) {
+                datos()
+            }
+        }
+    }
+    private fun datos() {
+        binding.tvNombreSitio.text= lst_Sitios[id_ubi-1].nombre
+        binding.tvDescconceptualSitio.text= "Descripcion Conceptual:\t"+ lst_Sitios[id_ubi-1].desc_conceptual_sitio
+        binding.tvDescsitioSitio.text="Descripcion Historica:\t"+ lst_Sitios[id_ubi-1].desc_historica_sitio
+        binding.tvCostoSitioSitio.text="Costo:"+ lst_Sitios[id_ubi-1].costo_sitio.toString()
+        binding.tvClimaRecomendadoSitio.text="Recomendacion Climatica:\t"+ lst_Sitios[id_ubi-1].recomendacion_climatica
+        binding.tvTemporadaRecomendadaSitio.text="Temporada Recomendada:\t"+ lst_Sitios[id_ubi-1].temporada_recomendada
+        binding.tvHorarioaperturaSitio.text="Horario de Apertura:\t"+ lst_Sitios[id_ubi-1].horario_apertura
+        binding.tvHorariocierreSitio.text="Horario de Cierre\t"+ lst_Sitios[id_ubi-1].horario_cierre
+    }
+
+
     private fun configurarUbicacion() {
         val ubicacion = lst_Ubicaciones.find { it.id_ubicacion == id_ubi }
 
@@ -55,6 +93,7 @@ class MapBoxActivity : AppCompatActivity() {
                 setCameraPosition(point)
                 addMarker(point)
             }
+
         } else {
             Toast.makeText(this, "Ubicación no encontrada", Toast.LENGTH_SHORT).show()
         }
@@ -82,25 +121,6 @@ class MapBoxActivity : AppCompatActivity() {
             .withIconSize(0.5)
 
         pointAnnotationManager.create(pointAnnotationOptions)
-    }
-
-
-
-    private fun getUbicaciones(){
-        lifecycleScope.launch(Dispatchers.IO) {
-            val ubicaciones = service.getUbicaciones()
-            lst_Ubicaciones = ubicaciones
-            launch(Dispatchers.Main) {
-                configurarUbicacion()
-            }
-        }
-    }
-    private fun setupRetrofit(){
-        val retrofit= Retrofit.Builder()
-            .baseUrl(Constants.Base_url)
-            .addConverterFactory( GsonConverterFactory.create())
-            .build()
-        service=retrofit.create(RetrofitService::class.java)
     }
 
 

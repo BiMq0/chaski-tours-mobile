@@ -18,9 +18,11 @@
             android:layout_width="178dp"
             android:layout_height="20dp"
             android:layout_marginTop="28dp"
+            android:textStyle="bold"
+            android:textColor="@color/secundario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.565"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imagen_sitio"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -30,7 +32,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="@+id/tv_nombre"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imagen_sitio"
             app:layout_constraintTop_toBottomOf="@+id/tv_nombre" />
 
         <Button
@@ -39,13 +41,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Ver"
+            android:backgroundTint="@color/principal"
             app:layout_constraintEnd_toEndOf="@+id/tv_descripcion"
             app:layout_constraintHorizontal_bias="0.639"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imagen_sitio"
             app:layout_constraintTop_toBottomOf="@+id/tv_descripcion" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imagen_sitio"
             android:layout_width="138dp"
             android:layout_height="147dp"
             android:layout_marginTop="28dp"
@@ -53,6 +56,6 @@
             app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

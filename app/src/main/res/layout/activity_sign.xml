@@ -12,6 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
+        android:textColor="@color/secundario"
+        android:textStyle="bold"
         android:text="INGRESA TUS DATOS PARA REGISTRARTE"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +81,7 @@
         android:layout_width="255dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="AAAA/MM/DD"
+        android:hint="AAAA-MM-DD"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/et_apmat_sign"
         app:layout_constraintStart_toStartOf="@+id/et_apmat_sign"
@@ -111,23 +113,25 @@
 
     <Button
         android:id="@+id/btn_cancelar_sign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
         android:layout_marginTop="88dp"
+        android:backgroundTint="@color/principal"
         android:text="Cancelar"
         app:layout_constraintEnd_toEndOf="@+id/et_telefono_sign"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.354"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_telefono_sign" />
 
     <Button
         android:id="@+id/btn_enviar_sign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
         android:layout_marginTop="88dp"
+        android:backgroundTint="@color/principal"
         android:text="Enviar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toStartOf="@+id/et_telefono_sign"
         app:layout_constraintTop_toBottomOf="@+id/et_telefono_sign" />
 </androidx.constraintlayout.widget.ConstraintLayout>
