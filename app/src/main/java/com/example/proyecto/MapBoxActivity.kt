@@ -111,6 +111,8 @@ class MapBoxActivity : AppCompatActivity() {
     private fun addMarker(point: Point) {
         val annotationApi = binding.mapView.annotations
         val pointAnnotationManager = annotationApi.createPointAnnotationManager()
+
+
         val markerBitmap = BitmapFactory.decodeResource(
             resources,
             R.drawable.red_marker

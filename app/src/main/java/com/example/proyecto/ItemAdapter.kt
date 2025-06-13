@@ -23,7 +23,8 @@ class ItemAdapter(private val lst_sitios:List<ItemSitio>, private val lst_imagen
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
-        val cardInflado =LayoutInflater.from(parent.context).inflate(R.layout.item,parent,false)
+        val cardInflado =LayoutInflater.from(parent.context)
+            .inflate(R.layout.item,parent,false)
         return ItemHolder(cardInflado)
     }
 

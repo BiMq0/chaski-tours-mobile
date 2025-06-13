@@ -39,7 +39,6 @@ class HomeActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        var lst1= imagenes("https://example.com/imagen3.jpg")
         setupRetrofit()
         getSitios()
     }

@@ -64,11 +64,9 @@ class SignActivity : AppCompatActivity() {
                 fecha_nac = binding.etFechanacSign.text.toString()
                 nacionalidad = "Bolivia"
                 telefono = binding.etTelefonoSign.text.toString()
-                var turista=Turista(codigo_visitante,correo,contrasenia,documento,nombre,appat,apmat,fecha_nac,nacionalidad,telefono)
+                var turista=Turista(codigo_visitante,correo,contrasenia
+                    ,documento,nombre,appat,apmat,fecha_nac,nacionalidad,telefono)
                 sentVisitante(turista)
-            }
-            else{
-
             }
         }
 
@@ -91,8 +89,9 @@ class SignActivity : AppCompatActivity() {
     }
 
     private fun validar(): Boolean {
-        if (binding.etCorreoSign.text.toString() == ""||binding.etContraseniaSign.text.toString() == ""||binding.etDocumentoSign.text.toString() == ""
-            ||binding.etNombreSign.text.toString() == ""||binding.etAppatSign.text.toString() == ""||binding.etApmatSign.text.toString() == ""
+        if (binding.etCorreoSign.text.toString() == ""||binding.etContraseniaSign.text.toString() == ""
+            ||binding.etDocumentoSign.text.toString() == "" ||binding.etNombreSign.text.toString() == ""
+            ||binding.etAppatSign.text.toString() == ""||binding.etApmatSign.text.toString() == ""
             ||binding.etFechanacSign.text.toString() == ""||binding.etTelefonoSign.text.toString() == "")
         {
             Toast.makeText(this@SignActivity, "Campos incompletos", Toast.LENGTH_SHORT).show()
