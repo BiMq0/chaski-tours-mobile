@@ -12,14 +12,14 @@
         android:id="@+id/tv_titulo_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="72dp"
         android:text="INICIAR SESIÓN"
         android:textColor="@color/secundario"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/img_texto" />
 
     <EditText
         android:id="@+id/et_correo"
@@ -27,6 +27,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:padding="10dp"
+        android:background="@drawable/bg_edittext_oval"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/tv_titulo_login"
@@ -40,6 +42,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
         android:ems="10"
+        android:padding="10dp"
+        android:background="@drawable/bg_edittext_oval"
         android:hint="Contraseña"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/et_correo"
@@ -72,6 +76,24 @@
         app:layout_constraintStart_toStartOf="@+id/et_contrasenia"
         app:layout_constraintTop_toBottomOf="@+id/et_contrasenia" />
 
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="228dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icono" />
+
+    <ImageView
+        android:id="@+id/img_texto"
+        android:layout_width="283dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        app:srcCompat="@drawable/titulo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
