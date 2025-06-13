@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/icono" />
+            android:src="@drawable/icono" />
 
         <ImageView
             android:id="@+id/img_texto_sign"
@@ -31,7 +31,7 @@
             app:layout_constraintTop_toBottomOf="@id/img_logo_sign"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/titulo" />
+            android:src="@drawable/titulo" />
 
         <TextView
             android:id="@+id/tv_titulo_sign"
