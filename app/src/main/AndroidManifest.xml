@@ -22,13 +22,19 @@
             android:name=".MapBoxActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".SitiosActivity"
             android:exported="false" />
         <activity
             android:name=".SignActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoriaActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

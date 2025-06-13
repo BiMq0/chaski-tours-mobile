@@ -22,7 +22,7 @@ class CategoriaAdapter(
         return CategoriaHolder(view)
     }
 
-    override fun getItemCount(): Int = lst_categorias.size
+    override fun getItemCount(): Int = lst_imagenes.size
 
     override fun onBindViewHolder(holder: CategoriaHolder, position: Int) {
         val categoria = lst_categorias[position]

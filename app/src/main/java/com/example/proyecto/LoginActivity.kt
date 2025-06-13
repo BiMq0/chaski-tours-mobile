@@ -5,15 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.KeyEventDispatcher
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.proyecto.databinding.ActivityLoginBinding
-import com.example.proyecto.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.Dispatcher
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

@@ -1,9 +1,350 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/recyclerview"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo_login"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D0001000"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:src="@drawable/icono"
+            android:alpha="0.8"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/titulo_blanco" />
+
+
+        <TextView
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:textAlignment="center"
+            android:text="Descubre mucho más en Bolivia Country"/>
+
+        <LinearLayout
+            android:id="@+id/contenido"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Tours sobrecotizados en el ambiente femenil"/>
+
+            <androidx.cardview.widget.CardView
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="40dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_nombre1"
+                        android:layout_width="178dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="28dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secundario"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.565"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_descripcion1"
+                        android:layout_width="175dp"
+                        android:layout_height="67dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_nombre1"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nombre1" />
+
+                    <Button
+                        android:id="@+id/btn_versitio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Ver"
+                        android:backgroundTint="@color/principal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_descripcion1"
+                        app:layout_constraintHorizontal_bias="0.639"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_descripcion1" />
+
+                    <ImageView
+                        android:id="@+id/imagen_sitio1"
+                        android:layout_width="138dp"
+                        android:layout_height="147dp"
+                        android:layout_marginTop="28dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="40dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_nombre2"
+                        android:layout_width="178dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="28dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secundario"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.565"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_descripcion2"
+                        android:layout_width="175dp"
+                        android:layout_height="67dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_nombre2"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nombre2" />
+
+                    <Button
+                        android:id="@+id/btn_versitio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Ver"
+                        android:backgroundTint="@color/principal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_descripcion2"
+                        app:layout_constraintHorizontal_bias="0.639"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_descripcion2" />
+
+                    <ImageView
+                        android:id="@+id/imagen_sitio2"
+                        android:layout_width="138dp"
+                        android:layout_height="147dp"
+                        android:layout_marginTop="28dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/contenido2"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:layout_width="match_parent"
+                android:text="Sitios más buscados por los fokin gringos"/>
+
+            <androidx.cardview.widget.CardView
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="40dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_nombre3"
+                        android:layout_width="178dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="28dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secundario"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.565"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_descripcion3"
+                        android:layout_width="175dp"
+                        android:layout_height="67dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_nombre3"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio3"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nombre3" />
+
+                    <Button
+                        android:id="@+id/btn_versitio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Ver"
+                        android:backgroundTint="@color/principal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_descripcion3"
+                        app:layout_constraintHorizontal_bias="0.639"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio3"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_descripcion3" />
+
+                    <ImageView
+                        android:id="@+id/imagen_sitio3"
+                        android:layout_width="138dp"
+                        android:layout_height="147dp"
+                        android:layout_marginTop="28dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/card4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="40dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_nombre4"
+                        android:layout_width="178dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="28dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secundario"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.565"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_descripcion4"
+                        android:layout_width="175dp"
+                        android:layout_height="67dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_nombre4"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nombre4" />
+
+                    <Button
+                        android:id="@+id/btn_versitio4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Ver"
+                        android:backgroundTint="@color/principal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_descripcion4"
+                        app:layout_constraintHorizontal_bias="0.639"
+                        app:layout_constraintStart_toEndOf="@+id/imagen_sitio4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_descripcion4" />
+
+                    <ImageView
+                        android:id="@+id/imagen_sitio4"
+                        android:layout_width="138dp"
+                        android:layout_height="147dp"
+                        android:layout_marginTop="28dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.068"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Categorias (dale click uvu)"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+                <ImageButton
+                    android:id="@+id/btnCategorias"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo"
+                    android:background="@color/white"
+                    />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

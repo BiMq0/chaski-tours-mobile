@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.proyecto.databinding.ActivityCategoriasBinding
 import com.example.proyecto.databinding.ActivityHomeBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -11,7 +12,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class CategoriaActivity :AppCompatActivity(){
-    private lateinit var binding: ActivityHomeBinding
+    private lateinit var binding: ActivityCategoriasBinding
     private lateinit var service: RetrofitService
     private lateinit var lst_categorias: List<ItemCategoria>
     private var lst_img_categorias : List<imagenes> = listOf(
@@ -30,7 +31,7 @@ class CategoriaActivity :AppCompatActivity(){
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityHomeBinding.inflate(layoutInflater)
+        binding = ActivityCategoriasBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
