@@ -5,19 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tv_titulo_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="INGRESA TUS DATOS"
+        android:layout_marginTop="324dp"
+        android:text="INICIAR SESIÓN"
+        android:textColor="@color/secundario"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/secundario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,11 +25,12 @@
         android:id="@+id/et_correo"
         android:layout_width="255dp"
         android:layout_height="48dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Ingresa tu correo"
+        android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/tv_titulo_login"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/tv_titulo_login"
         app:layout_constraintTop_toBottomOf="@+id/tv_titulo_login" />
 
@@ -39,7 +40,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
         android:ems="10"
-        android:hint="ingresa tu contraseña"
+        android:hint="Contraseña"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/et_correo"
         app:layout_constraintHorizontal_bias="0.0"
@@ -70,4 +71,7 @@
         app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="@+id/et_contrasenia"
         app:layout_constraintTop_toBottomOf="@+id/et_contrasenia" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
