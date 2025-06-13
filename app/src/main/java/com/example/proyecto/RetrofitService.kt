@@ -10,6 +10,8 @@ interface RetrofitService {
     suspend fun getTuristas():List<Turista>
     @GET(Constants.Path_Visitante)
     suspend fun getVisitante():List<Visitante>
+    @GET(Constants.Path_Categoria)
+    suspend fun getCategorias(): List<ItemCategoria>
 
     @GET(Constants.Path_Sitios)
     suspend fun getSitios():List<ItemSitio>

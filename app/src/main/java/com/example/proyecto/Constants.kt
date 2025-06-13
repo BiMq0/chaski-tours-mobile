@@ -7,4 +7,5 @@ object Constants {
     const val  Path_Sitios ="/api/sitios"
     const val  Path_Ubicaciones ="/api/ubicaciones"
     const val  Path_Visitante="/api/visitante"
+    const val  Path_Categoria="/api/sitio-categorias"
 }

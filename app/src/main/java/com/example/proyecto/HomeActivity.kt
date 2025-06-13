@@ -32,7 +32,6 @@ class HomeActivity : AppCompatActivity() {
         imagenes("https://upload.wikimedia.org/wikipedia/commons/5/5e/Cristo_de_la_Concordia%2C_Cochabamba_2.jpg"),
         imagenes("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Salar_Uyuni_au01.jpg/640px-Salar_Uyuni_au01.jpg")
         )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
